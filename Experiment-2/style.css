@@ -1,0 +1,59 @@
+.outer_div {
+    display: flex;
+    background-color:whitesmoke;
+    border: 2px solid black;
+    width: 250px;
+    align-items: center;
+    height: 200px;
+    justify-content: center;
+    padding: 50px;
+    
+}
+
+.inner_div {
+ display: flex;
+ flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   background-color:black;
+   width: 200px;
+   height: 130px;
+   border: 10px;
+   border-radius:10px;
+   padding:30px;
+}
+.Amount {
+    margin-bottom: 10px;
+    border-style:none;
+    background-color:none;
+    color: rgb(168, 162, 58);
+    font-size: 23px;
+}
+.Deposit,.Withdraw{
+    margin: 5px;
+    height : 30px;
+    width: 200px;
+    border-style:none;
+    border-radius: 5px;
+}
+
+.Deposit{
+    background-color:green;
+    color: white;
+}
+
+.Withdraw{
+    background-color: red;
+color: white;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:480px){
+
+.inner_div{
+    flex-direction: column;
+}
+}
