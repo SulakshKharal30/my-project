@@ -1,0 +1,71 @@
+Experiment Report: Bank Deposit and Withdraw UI
+
+In this experiment, I designed a basic user interface (UI) for a bank deposit and withdrawal system using HTML and CSS.
+
+HTML Overview
+
+To build the structure of the UI, I used common HTML tags like <div> and <button>. To style different sections individually, I assigned class attributes to the <div> elements.
+
+Basic Structure (Experiment 2):
+
+- An outer_div that contains the entire content of the page.
+- Inside it, an inner_div that holds the deposit and withdraw buttons, along with the input for the withdrawal amount.
+
+This forms the HTML skeleton, which is then styled using CSS.
+
+CSS Overview
+
+CSS (Cascading Style Sheets) is used to enhance the appearance of HTML elements with design and layout.
+
+Types of CSS:
+
+1. Inline CSS – CSS written directly inside an HTML tag.
+2. Internal CSS – CSS placed inside a <style> tag within the HTML file.
+3. External CSS – CSS written in a separate file and linked to the HTML using the <link> tag.
+
+Basic CSS Syntax:
+
+selector {
+    property: value;
+}
+
+/* Example: */
+body {
+    background-color: yellow;
+}
+
+CSS Concepts Applied
+
+Box Model:
+This fundamental concept in CSS helps define how elements are spaced and sized. It includes:
+
+- Content – The actual text or element.
+- Padding – The space between the content and the border.
+- Border – The outline around the element.
+- Margin – The space between elements or containers.
+
+Flexbox Layout:
+Flexbox is a layout model that helps arrange content in rows or columns.
+
+- If flex-direction: row, elements are aligned horizontally.
+- If flex-direction: column, they are aligned vertically.
+
+Responsive Design:
+Responsive UI adjusts automatically to different screen sizes and devices. This is achieved using the @media query in CSS, which applies styles based on screen width or other conditions.
+
+CSS Properties Used in This Project:
+
+- background-color – sets the background color.
+- color – sets the text color.
+- justify-content – aligns content horizontally.
+- border – customizes the border of elements.
+- border-radius – smooths the corners of elements.
+- display – defines the layout type (e.g., flex).
+
+What I Learned
+
+1. How to add and use class attributes in HTML tags.
+2. How to use Flexbox to align elements in rows and columns.
+3. How to apply CSS styles to elements using class selectors.
+4. Understanding the CSS box model for spacing and layout.
+5. How to create responsive designs using media queries.
