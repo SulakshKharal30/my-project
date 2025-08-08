@@ -1,0 +1,38 @@
+Experiment-3: Admin Dashboard using Grid Layout and Theme Switch (HTML & CSS)
+
+Objective:
+To design and implement an Admin Dashboard interface that utilizes CSS Grid for layout and provides a theme toggle (light/dark mode) using a pure CSS approach, without JavaScript.
+
+Description:
+In this experiment, an Admin Dashboard was created using HTML and CSS. The dashboard features a responsive layout built with CSS Grid and a checkbox-based theme switcher that changes the color scheme between light and dark modes.
+
+Key Features:
+
+1. :root Selector for CSS Variables
+The :root selector is a special CSS pseudo-class that targets the root element of the HTML document. It is used to define global CSS variables like:
+    --header-bg-color
+    --main-bg-color
+These variables promote reusability and make theme management more efficient.
+
+2. Theme Toggle using input:checked ~ .container
+This uses a combination of the :checked pseudo-class and the general sibling selector (~):
+    - input:checked selects the checkbox when it's checked.
+    - ~ .container selects the .container element that appears after the checkbox in the DOM.
+When the checkbox (with an ID like "theme") is checked, it applies a new set of variable values for the dark theme. This approach allows for toggling between themes purely with CSS.
+
+3. Grid Layout with grid-template-columns
+Defines a two-column layout:
+    - First column: Fixed width of 150px (commonly used for sidebar)
+    - Second column: Auto width, occupying the remaining space (main content)
+
+4. Grid Layout with grid-template-rows
+Defines a three-row structure:
+    - Row 1: 70px height (Header)
+    - Row 2: auto (Main Content Area)
+    - Row 3: 60px height (Footer)
+
+Learning Outcomes:
+1. Understand the concept and usage of CSS custom properties (variables)
+2. Apply the :root selector for managing global CSS values
+3. Create a theme switcher using only HTML and CSS (no JavaScript)
+4. Build structured page layouts using CSS Grid properties
