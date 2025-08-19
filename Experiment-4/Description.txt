@@ -1,0 +1,66 @@
+==================================================
+PROJECT TITLE: Live Character Counter Web App
+==================================================
+
+DESCRIPTION:
+------------
+This is a simple web-based application that dynamically counts the number of characters typed into a text area. It displays the count in real-time, giving users immediate feedback as they type. This kind of tool is commonly used in platforms where character limits apply, such as social media platforms, messaging apps, or online forms.
+
+The application is built using fundamental web technologies: HTML, CSS, and JavaScript. It does not require any external libraries or frameworks, making it lightweight and easy to understand for beginners.
+
+--------------------------------------------------
+TECHNOLOGIES USED:
+--------------------------------------------------
+- HTML5: Structure and elements
+- CSS3: Styling and layout
+- JavaScript (Vanilla JS): Functionality and interaction
+
+--------------------------------------------------
+HOW IT WORKS:
+--------------------------------------------------
+1. The user types text into the `<textarea>` input field.
+2. An `oninput` event triggers a JavaScript function whenever there is a change in the input.
+3. The JavaScript function counts the number of characters in the input.
+4. The character count is updated and displayed live below the text area.
+
+--------------------------------------------------
+PROJECT STRUCTURE EXPLANATION:
+--------------------------------------------------
+
+[1] HTML SECTION:
+-----------------
+- `<!DOCTYPE html>`: Declares the HTML5 document type.
+- `<html lang="en">`: Sets the language to English.
+- `<head>`: Contains metadata, character encoding, and page title.
+- `<body>`: Holds the visible content of the page.
+
+Key HTML Elements:
+- `<textarea id="inputarea">`: Input area for typing text.
+- `<span id="Counter">`: Displays the live character count.
+- `oninput="showcount()"`: JavaScript function triggered every time the input changes.
+
+[2] CSS SECTION:
+----------------
+The style block inside the `<style>` tag defines how the page looks.
+
+- `textarea`: Styled with width, height, border, and rounded corners.
+- `.outer_div`: Container for the content, with border, rounded corners, width, and center-aligned text.
+- `body`: Uses Flexbox to center the container on the screen.
+
+[3] JAVASCRIPT SECTION:
+-----------------------
+Function: `showcount()`
+
+- Accesses the value of the textarea using `document.getElementById("inputarea").value`.
+- Calculates the length of the input text using `.length`.
+- Updates the content of the `<span id="Counter">` using `textContent`.
+
+Code:
+```javascript
+function showcount() {
+    const textarea = document.getElementById("inputarea");
+    const count = textarea.value.length;
+
+    const counter = document.getElementById("Counter");
+    counter.textContent = count;
+}
