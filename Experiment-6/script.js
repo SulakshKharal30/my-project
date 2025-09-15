@@ -5,8 +5,8 @@ let currentPath = null;
 svg.addEventListener("mousedown", (e) => {
   drawing = true;
   currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  currentPath.setAttribute("stroke", "blue");
-  currentPath.setAttribute("stroke-width", "2");
+  currentPath.setAttribute("stroke", "red");
+  currentPath.setAttribute("stroke-width", "4");
   currentPath.setAttribute("fill", "none");
   currentPath.setAttribute("d", `M${e.offsetX},${e.offsetY}`);
   svg.appendChild(currentPath);
