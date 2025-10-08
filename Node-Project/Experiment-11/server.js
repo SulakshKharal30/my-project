@@ -1,18 +1,17 @@
 const express = require('express');
-const app = express();
-const port = 3000;
-const handlerGet = (request, response) => {
- response.send("URL:"+request.url + " Method:"+request.method);
-};
-// Define a route for GET requests to the root path
-app.get('/', handlerGet);
+const cardRoutes = require('./routes');
 
-// Define a route for POST requests to /submit
-app.post('/submit', (req, res) => {
- res.send('Data submitted!');
+const app = express();
+const PORT = 3000;
+
+app.use(express.json());
+
+app.use('/cards', cardRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
 
-// Start the server
-app.listen(port, () => {
- console.log(`Server running on http://localhost:${port}`);
+app.get('/', (req, res) => {
+  res.send('Welcome to the Playing Cards API! Try /cards to see all cards.');
 });
