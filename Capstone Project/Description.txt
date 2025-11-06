@@ -1,0 +1,31 @@
+ChatOps Deployment Bot – Project Overview
+
+Slack-Integrated Deployments:
+Trigger, monitor, approve, and rollback services directly from Slack using slash commands, interactive buttons, and modals.
+
+GitHub Actions Automation:
+Run workflows with parameters like service, version, and environment; view live updates and logs in Slack.
+
+Role-Based Access Control (RBAC):
+Map Slack users/roles to allowed actions and environments; require approvals for production deployments.
+
+Real-Time Status Streaming:
+Post live workflow progress, threaded logs, and final summaries to Slack channels for team visibility.
+
+Audit & Observability:
+Track every command and deployment outcome with immutable audit logs and correlation IDs; monitor lead time, success rate, and MTTR.
+
+Safe & Resilient Deployments:
+Concurrency controls, cooldown windows, idempotent commands, and recovery for in-flight runs ensure reliability.
+
+Configurable & Extensible:
+Store services, environments, workflow IDs, and Slack channel mappings in MongoDB; versioned configurations allow safe updates.
+
+Developer-Friendly Local Setup:
+Scripts to seed MongoDB, simulate GitHub webhooks, and run the bot locally; Docker support for consistent environments.
+
+Benefits for Teams:
+Reduces context switching, increases deployment safety, boosts transparency, and speeds up delivery with quick rollback/retry.
+
+Tech Stack:
+Node.js + Express, MongoDB, Slack Web & Events API, GitHub Actions API, Docker, and automated scripts.

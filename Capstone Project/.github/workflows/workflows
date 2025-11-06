@@ -1,0 +1,26 @@
+name: Deploy Service
+
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Service name'
+        required: true
+      version:
+        description: 'Version to deploy'
+        required: true
+      environment:
+        description: 'Environment (staging/production)'
+        required: true
+
+jobs:
+  deploy:
+    name: Deploy ${{ github.event.inputs.service }} to ${{ github.event.inputs.environment }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
