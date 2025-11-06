@@ -1,17 +1,15 @@
 const express = require('express');
-const cardRoutes = require('./routes');
-
 const app = express();
-const PORT = 3000;
+const seatRoutes = require('./routes');
 
 app.use(express.json());
+app.use('/seats', seatRoutes);
 
-app.use('/cards', cardRoutes);
-
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Playing Cards API! Try /cards to see all cards.');
+  res.send('Welcome to the Concurrent Ticket Booking System API! Use /seats to view and manage bookings.');
 });
